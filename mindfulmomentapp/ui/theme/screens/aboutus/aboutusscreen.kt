@@ -52,8 +52,6 @@ fun AboutUsScreen(navController: NavHostController) {
 
             )
             Spacer(modifier = Modifier.height(10.dp))
-
-            // ABOUT US
             Text(
                 text = "ABOUT US",
                 modifier = Modifier.padding(vertical = 8.dp),
@@ -73,7 +71,6 @@ fun AboutUsScreen(navController: NavHostController) {
             // OUR STORY
             Text(
                 text = "OUR STORY",
-                //style = MaterialTheme.typography.body1,
                 modifier = Modifier.padding(vertical = 8.dp),
                 fontFamily = FontFamily.Cursive,
                 fontWeight = FontWeight.W900,
@@ -88,8 +85,6 @@ fun AboutUsScreen(navController: NavHostController) {
                 color = Color.Black,
                 fontWeight = FontWeight.W500
             )
-
-            // SERVICES AND AMENITIES
             Text(
                 text = "SERVICES AND AMENITIES",
                 modifier = Modifier.padding(vertical = 8.dp),
@@ -100,17 +95,14 @@ fun AboutUsScreen(navController: NavHostController) {
             )
             Text(
                 text = "At Nikev Hostels, we offer a range of accommodation to suit every student's needs from cozy dormitories to private rooms with modern amenities. Our facilities include a spacious common area for socializing and Wi-Fi access throughout the hostel.",
-                //style = MaterialTheme.typography.body1,
                 modifier = Modifier.padding(bottom = 16.dp),
                 fontSize = 17.sp,
                 color = Color.Black,
                 fontWeight = FontWeight.W500
             )
 
-            // CONTACT US
             Text(
                 text = "CONTACT US",
-                //style = MaterialTheme.typography.body1,
                 modifier = Modifier.padding(vertical = 8.dp),
                 fontFamily = FontFamily.Cursive,
                 fontWeight = FontWeight.W900,
@@ -118,27 +110,17 @@ fun AboutUsScreen(navController: NavHostController) {
                 fontSize = 25.sp
             )
             Text(
-                text = "Ready to experience Nikev Hostels? Book your stay today and discover the perfect comfort. For more information, contact us at [0703765456] or email us at nikevhostels123@gmail.com",
-                //style = MaterialTheme.typography.body1,
+                text = "Ready to experience Nikev Hostels? Book your stay today and discover the perfect comfort. For more information, contact us at [0703765456] or email us at nikevhostels123@gmail.com", //style = MaterialTheme.typography.body1,
                 modifier = Modifier.padding(bottom = 16.dp),
                 fontSize = 17.sp,
                 color = Color.Black,
                 fontWeight = FontWeight.W500
             )
 
-         Spacer(modifier = Modifier.height(10.dp))
-            Button(
-                onClick = { navController.navigate(ROUTE_REGISTRATION) },
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(bottom = 16.dp)
-            ) {
-                Text(text = "BOOK NOW")
-            }
         }
     }
 }
-@Preview(showBackground = true)
+@Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun AboutUsScreenPreview() {
     AboutUsScreen(rememberNavController())

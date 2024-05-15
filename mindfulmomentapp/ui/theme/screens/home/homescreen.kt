@@ -27,11 +27,11 @@ import com.example.mindfulmomentapp.navigation.ROUTE_REGISTRATION
 data class Room(val number: String, val price: String)
 
 val sampleRooms = listOf(
-    Room("101", "$50"),
-    Room("102", "$60"),
-    Room("103", "$70"),
-    Room("201", "$80"),
-    Room("202", "$90")
+    Room("101", "Ksh 8500"),
+    Room("102", "Ksh 5400"),
+    Room("103", "Ksh 9000"),
+    Room("201", "Ksh 7500"),
+    Room("202", "Ksh 10000")
 )
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -59,12 +59,9 @@ fun HomePage(navController: NavHostController) {
             Spacer(modifier = Modifier.height(16.dp))
             RoomList(rooms = sampleRooms)
             Spacer(modifier = Modifier.height(32.dp))
+
             Button(onClick = { navController.navigate(ROUTE_REGISTRATION) }) {
-                Text(text = "Register")
-            }
-            Spacer(modifier = Modifier.height(16.dp))
-            Button(onClick = { navController.navigate(ROUTE_LOGIN) }) {
-                Text(text = "Login")
+                Text(text = "BOOK NOW")
             }
         }
     }
@@ -87,7 +84,7 @@ fun RoomItem(room: Room) {
     ) {
         Text(text = "Room Number: ${room.number}")
         Text(text = "Price: ${room.price}")
-        // You can add more details or customize the room item layout as needed
+
     }
 }
 
